@@ -1,0 +1,63 @@
+{% extends "base.jinja2" %}
+
+{% block content %}
+  <div class="advanced_search">
+            <div class="search_book">
+                 <form method="get" id="form" class="form_search_book" name="advanced_search" action="/search">
+      <h3>Расширенный поиск</h3>
+    <div class="block">
+      <label for="title">Заглавие <input type="text" name="title"></label>
+
+    </div>
+    <div class="block">
+      <label for="publishing_house">Издательство <input type="text" name="publishing_house"></label>
+
+    </div>
+
+    <div class="block">
+      <label for="author">Автор <input type="text" name="author"></label>
+
+    </div>
+
+    <div class="block">
+      <label for="year">Год издания <input type="text" name="year"></label>
+
+    </div>
+    <div class="block">
+      <label for="isbn">ISBN <input type="text" name="isbn"></label>
+
+    </div>
+
+      <div class="block">
+      <label for="town">Город <input type="text" name="town"></label>
+
+    </div>
+
+       <div class="button_publish get_code">
+         <input type="submit" value="Применить и начать поиск">
+    </div>
+
+  </form>
+
+<div class="info_no">
+    <p>{{message}}</p>
+</div>
+
+  <div class="book-list">
+    <div class="container">
+    {% for book in books %}
+       <div class="book_card">
+            <div class="picture picture_python">
+                <img src="/static/{{ book.img }}" alt="">
+            </div>
+           <div class="book_description">
+               <h3><a href="/books/{{ book.id }}">{{ book.book_name }}</a></h3>
+                 <p>{{ book.description }}</p>
+           </div>
+
+        </div>
+    {% endfor %}
+   </div>
+            </div>
+        </div>
+{% endblock content %}

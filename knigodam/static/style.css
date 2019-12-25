@@ -1,0 +1,456 @@
+body {
+  min-width: 1000px;
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+}
+
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.main-header {
+  background-color: #20B2AA;
+  padding-top: 65px;
+  padding-bottom: 65px;
+}
+
+.main-header-inner {
+
+
+
+}
+
+.header-top {
+
+}
+.logo {
+  float: left;
+    display: block;
+  width: 180px;
+  height: 100px;
+  background-image: url("../img/logo.png");
+  background-position: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+
+.search-input input[type="text"] {
+font-family: Roboto, normal;
+  font-size: 29px;
+
+height: 36px;
+width: 930px;
+}
+
+.header-search-btn{
+    float: right;
+    /*position: absolute;
+    top:0;
+    bottom: 0;
+    right: 15px;
+    text-decoration: none;
+    white-space: nowrap;
+    border: 0 none;*/
+     background-image: url("../img/search.png");
+    background-position: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+
+
+}
+
+.header-advanced-search-btn{
+
+
+    /*position: absolute;
+    top:0;
+    bottom: 0;
+    right: 15px;
+    text-decoration: none;
+    white-space: nowrap;
+    border: 0 none;*/
+     background-image: url("../img/advanced%20search.png");
+    /*background-position: 0;*/
+  background-repeat: no-repeat;
+  background-size: contain;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+padding-top: -20;
+
+
+}
+
+.main-menu{
+    clear: both;
+ padding-top: 50px;
+}
+
+.main-menu ul {
+
+  list-style: none;
+    text-align: center;
+}
+
+.main-menu li {
+  display: inline-block;
+  margin-right: 40px;
+  vertical-align: top;
+  font-size: 18px;
+  line-height: 24px;
+
+}
+
+.main-menu a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.main-menu a:hover {
+  text-decoration: underline;
+}
+
+.main-menu a:active {
+  text-decoration: none;
+  opacity: 0.3;
+}
+
+.form-search{
+   padding-top: 50px;
+
+}
+
+.picture{
+    width:150px;
+    height:230px;
+    float:left;
+    margin: 0 15px 15px 0;
+    text-align:center;
+    padding: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+
+}
+.picture img{
+    width:150px;
+    height:230px;
+}
+
+.describe{
+    width:500px;
+    height:auto;
+    float:left;
+    margin: 0 15px 15px 0;
+    text-align:center;
+    padding: 10px;
+}
+
+.books ul {
+
+  list-style: none;
+    text-align: center;
+}
+
+.picture{
+    width:150px;
+    height:230px;
+    /*float:left; */
+    margin: 0 15px 15px 0;
+    text-align:center;
+    padding: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /*display: inline-block;*/
+
+}
+
+.picture_python{
+    background-image: url("../img/python.jpg");
+
+}
+
+.picture_tobol{
+    background-image: url("../img/tobol.jpg");
+}
+
+.picture_center{
+    background-image: url("../img/center.jpg");
+}
+
+.book_card{
+   padding: 24px;
+    position: relative;
+    display: inline-block;
+    width:1040px;
+}
+
+.book-list, .form_autorization{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+h3{
+    font-family: Roboto, normal;
+  font-size: 30px;
+}
+
+p{
+    font-family: Roboto, normal;
+  font-size: 16px;
+}
+
+.footer{
+    background-color: aliceblue;
+    text-align: right;
+
+}
+
+.enter_tel, .enter_code{
+    text-align: center;
+}
+
+input[type="tel"] {
+font-family: Roboto, normal;
+  font-size: 16px;
+  width: 500px;
+}
+
+
+.get_code input[type="submit"]{
+
+    height:50px;
+    background-color:  #239892;
+    font-size: 18px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.get_code input[type="submit"]:hover{
+    background-color: #187d78;
+}
+
+.get_code input[type="submit"]:active{
+    background-color: #34ada7;
+}
+
+.enter_code input[type="submit"]{
+
+    height:50px;
+    background-color:  #239892;
+    font-size: 18px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.enter_code input[type="submit"]:hover{
+    background-color: #187d78;
+}
+
+.enter_code input[type="submit"]:active{
+    background-color: #34ada7;
+}
+
+.footer_autorization{
+
+    position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 80px;
+}
+
+.picture_description{
+    margin-left: auto;
+    margin-right: auto;
+    width: 6em
+}
+.description_book{
+    clear: both;
+    padding: 40px 160px 0px 160px;
+    text-align: center;
+}
+
+.info_book{
+    margin-top: 40px;
+    text-align: center;
+}
+
+table {
+    width: 800px;
+    margin: auto;
+    border: 1px solid green;
+    border-collapse: collapse;
+}
+
+th{
+    text-align: left;
+}
+
+.table_desription{
+    margin: 40px;
+}
+
+.info_seller{
+    padding: 40px;
+}
+
+.block {
+    display: inline-block;
+}
+
+.form_search_book label {
+    display: block;
+}
+
+
+.form_search_book input{
+    display: block;
+}
+
+.form_publish input, label{
+    display: block;
+}
+.publish_book, .advanced_search{
+     padding: 40px 200px 40px 510px;
+}
+
+.form_publish input[type="text"] {
+font-family: Roboto, normal;
+  font-size: 16px;
+
+height: 16px;
+width: 960px;
+}
+
+.button_publish{
+    margin-top: 20px;
+}
+
+.form_search_book input[type="text"] {
+font-family: Roboto, normal;
+  font-size: 16px;
+
+height: 16px;
+width: 960px;
+}
+
+.form_publish input[type="tel"] {
+font-family: Roboto, normal;
+  font-size: 16px;
+width: 960px;
+}
+
+.form_publish input[type="file"] {
+font-family: Roboto, normal;
+  font-size: 16px;
+width: 960px;
+}
+
+.managment, .messages{
+    text-align: center;
+}
+
+.status, .delete{
+    text-align: left;
+    margin-left: 110px;
+}
+
+/* Chat containers */
+.container_chat {
+    border: 2px solid #dedede;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+   /* padding: 10px;*/
+   /* margin: 10px 0;*/
+
+    margin: 40px 200px 40px 400px;
+
+}
+
+/* Darker chat container */
+.darker {
+    border-color: #ccc;
+    background-color: #ddd;
+}
+
+/* Clear floats */
+.container_chat::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Style images */
+.container_chat img {
+    float: left;
+    max-width: 60px;
+    width: 100%;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+/* Style the right image */
+.container_chat img.right {
+    float: right;
+    margin-left: 20px;
+    margin-right:0;
+}
+
+/* Style time text */
+.time-right {
+    float: right;
+    color: #aaa;
+}
+
+/* Style time text */
+.time-left {
+    float: left;
+   color: #999;
+}
+
+.search{
+   float:left;
+}
+
+.search1{
+    float:right;
+
+}
+
+form .row {
+display: block;
+padding: 7px 8px;
+margin-bottom: 7px;
+}
+
+.contacts_form textarea{
+   width:500px;
+    height:300px;
+  padding: 13px 23px;
+  font-weight: 400;
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+  line-height: 24px;
+  outline: none;
+  border: 2px solid #b2b2b2;
+  border-radius: 2px;
+}
+
+.info_no p{
+    text-align:center;
+}
+
+

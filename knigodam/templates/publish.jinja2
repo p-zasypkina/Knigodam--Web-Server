@@ -1,0 +1,71 @@
+{% extends "base.jinja2" %}
+
+{% block content %}
+        <div class="publish_book">
+            <div class="publish">
+
+  <form action="#" method="POST" id="form" class="form_publish" accept-charset="utf-8" enctype="multipart/form-data">
+      <h3>Разместить книгу</h3>
+    <div class="block">
+      <label for="title">Заглавие <input type="text" name="title"></label>
+
+    </div>
+
+    <div class="block">
+      <label for="des">Описание <input type="text" name="des"></label>
+
+    </div>
+
+    <div class="block">
+      <label for="cover">Обложка книги<input type="file" name="cover" multiple accept="image/*,image/jpeg"></label>
+
+    </div>
+
+    <div class="block">
+      <label for="publishing_house">Издательство <input type="text" name="publishing_house"></label>
+
+    </div>
+
+    <div class="block">
+      <label for="author">Автор <input type="text" name="author"></label>
+
+    </div>
+
+    <div class="block">
+      <label for="year">Год издания <input type="text" name="year"></label>
+
+    </div>
+      <div class="block">
+      <label for="isbn">ISBN <input type="text" name="isbn"></label>
+
+    </div>
+
+
+    <div class="block">
+      <label for="series">Серия <input type="text" name="series"></label>
+
+    </div>
+
+      <div class="block">
+      <label for="type_obl">Тип обложки <input type="text" name="type_obl"></label>
+
+    </div>
+
+      <div class="block">
+      <label for="kol">Количество страниц <input type="text" name="kol"></label>
+
+    </div>
+
+     <div class="block">
+      <label for="language">Язык <input type="text" name="language"></label>
+
+    </div>
+       <div class="button_publish get_code">
+         <input type="submit" value="Отправить">
+    </div>
+
+  </form>
+
+</div>
+            </div>
+{% endblock content %}

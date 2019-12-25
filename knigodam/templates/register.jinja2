@@ -1,0 +1,45 @@
+{% extends "base.jinja2" %}
+
+{% block content %}
+        <div class="publish_book">
+            <div class="publish">
+
+  <form action="#" method="POST" id="form" class="form_publish">
+      <h3>Заполните форму регистрации</h3>
+
+    <div class="block">
+      <label for="name">Имя <input type="text" name="name"></label>
+
+    </div>
+
+    <div class="block">
+      <label for="town">Город <input type="text" name="town"></label>
+
+    </div>
+
+    <div class="block">
+      <label for="tel">Введите телефон в формате 8xxxxxxxxxx: <input type="tel" name="tel" pattern="8[0-9]{3}[0-9]{3}[0-9]{2}[0-9]{2}"></label>
+
+    </div>
+
+    <div class="block">
+      <label for="email">Email <input type="text" placeholder="name@mail.ru" name="email"></label>
+    </div>
+
+    <div class="block">
+      <label for="pass">Пароль</label><input type="password" name="pass" id="pass">
+    </div>
+
+    <div class="block">
+      <label for="pass-repeat">Повторите</label><input type="password" name="pass-repeat" id="pass-repeat">
+    </div>
+
+    <div class="button_publish get_code">
+         <input type="submit" value="Зарегистрироваться">
+    </div>
+
+  </form>
+
+</div>
+</div>
+{% endblock content %}

@@ -1,0 +1,32 @@
+{% extends "base.jinja2" %}
+{% block content %}
+
+
+<div class="info_no">
+    <p>{{ no_message }}</p>
+</div>
+
+{% for book in data %}
+   {% for message in book.messages %}
+
+<div class="book-list">
+    <div class="container">
+        <div class="book_card">
+
+            <div class="picture picture_python">
+               <img src="/static/{{ book.img }}" alt="">
+            </div>
+
+            <div class="book_description">
+                <h3><a href="/books/{{ book.id }}">{{ book.name }}</a></h3>
+                <p>{{ message.text }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+    {% endfor %}
+{% endfor %}
+
+{%endblock%}
+
+

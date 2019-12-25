@@ -1,0 +1,89 @@
+{% extends "base.jinja2" %}
+{% block title %}KnigoDam{% endblock %}
+{% block content %}
+<div class="info_book">
+             <h3><a href="/books/{{ book.id }}">{{ book.book_name }}</a></h3>
+            <div class="picture_description">
+
+            <div class="picture picture_python">
+               <img src="/static/{{ book.img }}" alt="">
+            </div>
+          </div>
+            <div class="description_book">
+            <p>{{ book.description }}</p>
+            </div>
+
+            <div class="table_desription">
+                <div class="table">
+                <table border='1'>
+                <tr>
+                    <th>Автор</th>
+                    <th>{{ book.author }}</th>
+                </tr>
+                <tr>
+                   <th>Серия</th>
+                    <th>{{ book.series }}</th>
+                </tr>
+                <tr>
+                   <th>Издательство</th>
+                    <th>{{ book.publishing_house }}</th>
+                </tr>
+                <tr>
+                   <th>Год издания</th>
+                    <th>{{ book.year }}</th>
+                </tr>
+                <tr>
+                   <th>Тип обложки</th>
+                    <th>{{ book.type_of_cover }}</th>
+                </tr>
+                 <tr>
+                   <th>Количество страниц</th>
+                    <th>{{ book.number_of_pages }}</th>
+                </tr>
+                    <tr>
+                   <th>ISBN</th>
+                    <th>{{ book.ISBN }}</th>
+                </tr>
+                    <tr>
+                   <th>Язык издания</th>
+                    <th>{{ book.language }}</th>
+                </tr>
+                </table>
+                </div>
+            </div>
+
+            <div class="info_seller">
+                {% for user in users %}
+
+                 <a href="/user/{{ user.id }}">{{ user.name }}, {{ user.city}}</a>
+                {% endfor %}
+            </div>
+
+
+<div>
+{%if show_form %}
+
+                <form action="#" method="POST" id="form" class="contacts_form">
+
+                <div class="row">
+                <label for="message-text">Сообщение:</label>
+
+                     <textarea id="message" name="message" placeholder="Напишите сообщение продавцу со своими контактами для связи"></textarea>
+                </div>
+
+                <div class="button get_code">
+                        <input type="submit" value="Начать чат с продавцом">
+                 </div>
+                </form>
+
+
+{%endif%}
+
+ {% if logined %}
+
+                {% else %}
+              <a href="/login">Вход</a>
+               {% endif %}
+            </div>
+            </div>
+{% endblock %}

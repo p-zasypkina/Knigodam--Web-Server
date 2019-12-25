@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="utf-8">
+    <title>
+    {% block head %}
+        {{ KnigoDam }}
+    {% endblock %}
+    </title>
+    {% block css %}
+    <link rel="stylesheet" href="/static/style.css">
+    {% endblock %}
+</head>
+
+
+<body>
+    {% block header %}
+     <header class="main-header main-header-inner">
+      <div class="container">
+        <div class="header-top">
+          <div class="logo">
+            <a href="/"><img src="/static/logo.png" width="180" height="100" alt="logo"></a>
+          </div>
+            <div class="form-search">
+                <div class="search">
+                    <form id="searchform" name="searchform" class="search-form" method="get" action="/">
+                        <div class="search-input">
+                            <span class="header-search-input">
+                                <input maxlength="100" id="search-field" class="input search-input" type="text" placeholder="Поиск книг" value="{{ book_list  }}" name="like">
+
+                            </span>
+                            <button class="header-search-btn" type="submit" form="searchform">
+
+                                <span class="header-search-icon">
+                                 <img src="/static/search.png" width="30" height="30">
+                                </span>
+                            </button>
+
+
+
+                        </div>
+                    </form>
+
+                </div>
+                <div class="search1">
+                      <a href="/search">
+                        <button class="header-advanced-search-btn" >
+                                <span class="header-advanced-search-icon">
+                                <img src="/static/advancedsearch.png" width="30" height="30">
+                                </span>
+                        </button>
+                      </a>
+                    </div>
+            </div>
+          <div class="main-menu">
+            <ul>
+              <li><a href="/">Главная</a></li>
+              <li><a href="/publish">Разместить книгу</a></li>
+              <li><a href="/chat">Личные сообщения</a></li>
+              <li><a href="/managment">Управление книгами</a></li>
+
+                {% if logined %}
+
+                {% else %}
+              <li><a href="/register">Регистрация</a></li>
+               {% endif %}
+
+
+              {% if logined %}
+                <li><a href="/logout">Выйти</a></li>
+              {% else %}
+                <li><a href="/login">Вход</a></li>
+              {% endif %}
+
+
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </header>
+    {% endblock %}
+
+
+
+    {% block content %}
+        <div id="content"></div>
+        <br />
+        <br />
+        <br />
+    {% endblock %}
+
+    {% block footer %}
+        <div class="footer">
+
+             <hr>
+            <p>&copy; Все права защищены</p>
+
+        </div>
+    {% endblock %}
+
+</body>
+</html>

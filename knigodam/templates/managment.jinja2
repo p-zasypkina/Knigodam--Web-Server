@@ -1,0 +1,51 @@
+
+{% extends "base.jinja2" %}
+{% block content %}
+
+
+<div class="managment">
+            <h3>Управление книгами</h3>
+        </div>
+ <div class="book-list">
+    <div class="container">
+
+        <h3>Список ваших книг:</h3>
+
+        <div class="info_no">
+            <p>{{message}}</p>
+        </div>
+
+        {% for book in books %}
+       <div class="book_card">
+            <div class="picture picture_python">
+               <img src="/static/{{ book.img }}" alt="">
+            </div>
+           <div class="book_description">
+               <h3><a href="/books/{{ book.id }}">{{ book.book_name }}</a></h3>
+
+           </div>
+
+           <div class="book_description">
+            <form action="?book_id={{book.id}}" method="POST" id="form" class="form_publish">
+                <p>Статус: {{ book.status }}</p>
+                    <div class="block">
+                    <select name="status" value="{{ book.status }}">
+                        <option value="Не куплена">Не куплена</option>
+                        <option value="Ожидание">Ожидание</option>
+                    </select>
+                        <div class="">
+                         <input type="submit" value="Изменить статус">
+                        </div>
+                    </div>
+
+            </form>
+           </div>
+
+           <a href="/books/{{ book.id }}/delete">Delete</a>
+
+       </div>
+       {% endfor %}
+    </div>
+
+ </div>
+{% endblock content %}

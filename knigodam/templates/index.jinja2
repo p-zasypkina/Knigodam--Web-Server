@@ -1,0 +1,25 @@
+
+
+{% extends "base.jinja2" %}
+{% block content %}
+
+<div class="info_no">
+    <p>{{message}}</p>
+</div>
+
+<div class="book-list">
+    <div class="container">
+    {% for book in books %}
+       <div class="book_card">
+            <div class="picture picture_python">
+                <img src="/static/{{ book.img }}" alt="">
+            </div>
+           <div class="book_description">
+               <h3><a href="/books/{{ book.id }}">{{ book.book_name }}</a></h3>
+                 <p>{{ book.description }}</p>
+           </div>
+
+        </div>
+    {% endfor %}
+   </div>
+{% endblock content %}

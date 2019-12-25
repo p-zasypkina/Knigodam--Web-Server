@@ -1,0 +1,38 @@
+
+{% extends "base.jinja2" %}
+
+{% block content %}
+        <div class="publish_book">
+            <div class="publish">
+
+  <form action="#" method="POST" id="form" class="form_publish">
+      <h3>Введите данные для входа</h3>
+
+    <div class="block">
+      <label for="name">Имя <input type="text" name="login"></label>
+
+    </div>
+
+    <div class="block">
+      <label for="pass">Пароль</label><input type="text" name="password" id="pass">
+    </div>
+
+    <input type="hidden" value={{page}}>
+
+   <div>{{ message }}</div>
+
+    <div class="button_publish get_code">
+         <input type="submit" value="Войти">
+    </div>
+
+
+
+
+
+
+
+  </form>
+
+</div>
+</div>
+{% endblock content %}

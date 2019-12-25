@@ -1,0 +1,17 @@
+{% extends "base.jinja2" %}
+{% block content %}
+ <div class="form_enter_code">
+        <div class="enter_code">
+            <h3 class="enter_code">Введите код: </h3>
+            <form action="/" method="POST" id="form" class="enter enter_tel">
+                <p><input type="code" name="code"></p>
+                <div class="button enter_code">
+                        <input type="submit" value="Авторизоваться">
+                 </div>
+            </form>
+
+        </div>
+
+    </div>
+
+{% endblock content %}
